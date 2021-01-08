@@ -1,0 +1,10 @@
+<p>
+  Attention: <%= record.metadata.contributor_ci.text_full_name %>,<%= record.metadata.contributor_data_manager.text_full_name %>
+</p>
+
+<p>
+  A data publication, <%= record.metadata.title %>, has been published Click <a href="<%= BrandingService.getBrandAndPortalPath(req) %>/record/view/<%= oid %>">here</a> to view the publication
+</p>
+
+<p>Kind regards</p>
+<p>UTS eResearch and UTS Library Research Data Team</p>

@@ -1,0 +1,32 @@
+{
+  "name": "@uts-eresearch/sails-hook-redbox-uts",
+  "version": "1.0.0",
+  "description": "UTS customisation of RedBox",
+  "main": "index.js",
+  "sails": {
+    "isHook": true
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTS-eResearch/sails-hook-redbox-uts.git"
+  },
+  "keywords": [
+    "RedBox",
+    "UTS",
+    "data",
+    "management",
+    "Stash"
+  ],
+  "author": "Moises Sacal",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/UTS-eResearch/sails-hook-redbox-uts/issues"
+  },
+  "homepage": "https://github.com/UTS-eResearch/sails-hook-redbox-uts#readme",
+  "dependencies": {
+    "sails-hook-redbox-hook-config-utils": "git+https://github.com/uts-eresearch/sails-hook-redbox-config-utils.git"
+  }
+}

@@ -1,0 +1,17 @@
+<p>Dear <%= name %>,</p>
+
+<p>A research data management plan (RDMP) for project, <%= record.metadata.title %>, has been transferred to the custody of <%= record.metadata.dataLicensingAccess_manager %>. The RDMP outlines key details about the management of research data for this project, including the retention period and who may access the data.</p>
+
+<p>View your RDMP in Stash <a href="<%= BrandingService.getBrandAndPortalPath(req) %>/record/view/<%= oid %>">here</a>.</p>
+
+<p>Please note that the following people have edit access to the plan:</p>
+
+<p><strong>First named Chief investigator:</strong> <%= record.metadata.contributor_ci.text_full_name %></br>
+<strong>Data manager:</strong> <%= record.metadata.contributor_data_manager.text_full_name %></p>
+
+<p>If any UTS based collaborators are listed on the plan they will have view access to the plan.</p>
+
+<p>If you have questions about your RDMP please email <a href="mailto:<%= sails.config.email.datalibrarian.email %>?subject=Stash%20Question"><%= sails.config.email.datalibrarian.email %></a>.</p>
+
+<p>Kind regards</p>
+<p>UTS eResearch and UTS Library Research Data Team</p>

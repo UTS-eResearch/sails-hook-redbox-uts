@@ -1,0 +1,73 @@
+<div class="default-page">
+  <div class="header">
+    <h1 id="main-title" class="container"><%= TranslationService.t('welcome-title') %></h1>
+  </div>
+<div class="row">
+    <div class="col-md-3 homepanel">
+      <div class="panel panel-default">
+         <div class="panel-heading text-center">
+             <span class="panel-title">
+               <div><img class="overlay" src="<%= BrandingService.getBrandAndPortalPath(req) %>/images/checklist.png" alt="@document.icon" width="43px" height="30px"></div>
+               <%= TranslationService.t('menu-plan')%>
+             </span>
+         </div>
+         <div class="panel-body">
+           <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/record/rdmp/edit"><%= TranslationService.t('create-rdmp')%></a></div>
+           <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/dashboard/rdmp"><%= TranslationService.t('edit-dashboard-rdmp')%></a></div>
+           <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/getAdvice"><%= TranslationService.t('get-advice') %></a></div>
+           <div><a href="https://youtu.be/EVOkeT5CAjA" rel="noreferrer noopener" target="_blank">How to create an RDMP? [Video]</a></div>
+           <div><a href="https://staff.uts.edu.au/topichub/Pages/Research/The%20UTS%20research%20environment/Technology%20for%20research/Stash%20and%20your%20Ethics%20Application/stash-and-your-ethics-application.aspx" rel="noreferrer noopener" target="_blank">How to attach your RDMP to your ethics application?</a></div>
+         </div>
+      </div>
+    </div>
+    <div class="col-md-3 homepanel">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <div><i class="fa fa-sitemap fa-3x"></i></div>
+          <span class="panel-title"><%= TranslationService.t('menu-organise-worspace')%></span>
+        </div>
+        <div class="panel-body">
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/workspaces/list"><%= TranslationService.t('workspaces-dashboard')%></a></div>
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/availableServicesList"><%= TranslationService.t('workspace-services-list') %></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 homepanel">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <div><i class="fa fa-laptop fa-3x"></i></div>
+            <span class="panel-title"><%= TranslationService.t('menu-manage')%></span>
+        </div>
+        <div class="panel-body">
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/record/dataRecord/edit"><%= TranslationService.t('create-datarecord')%></a></div>
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/dashboard/dataRecord"><%= TranslationService.t('edit-dashboard-datarecord')%></a></div>
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/record/transfer/rdmp"><%= TranslationService.t('transfer-ownership-rdmp')%></a></div>
+        </div>
+       </div>
+    </div>
+    <div class="col-md-3 homepanel">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <div><i class="fa fa-rocket fa-3x"></i></div>
+            <span class="panel-title"><%= TranslationService.t('menu-publish')%></span>
+        </div>
+        <div class="panel-body">
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/record/dataPublication/edit"><%= TranslationService.t('create-data-publication')%></a></div>
+          <div><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/dashboard/dataPublication"><%= TranslationService.t('edit-dashboard-publication')%></a></div>
+        </div>
+       </div>
+    </div>
+
+</div>
+<!-- simple jquery script to make all the panels equal height -->
+<script>
+  $( document ).ready(function() {
+    panels = $('.homepanel .panel-default .panel-body');
+    maxHeight = Math.max.apply(
+      Math, panels.map(function() {
+        return $(this).height();
+        }).get());
+    panels.height(maxHeight);
+  });
+</script>
+</div>

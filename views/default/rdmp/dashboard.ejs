@@ -1,0 +1,35 @@
+<!-- Default home page -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
+
+
+
+<div class="default-page">
+  <div class="header">
+    <h1 id="main-title" class="container"><%= TranslationService.t('edit-dashboard') %> <%= TranslationService.t(recordType+'-title-label') %></h1>
+    <div class="container">
+    </div>
+    <br/>
+  </div>
+  <div class="row" id="loading">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-10">
+      <img class="center-block" src="/images/loading.svg" alt="<%= TranslationService.t('loading-alt-text') %>">
+    </div>
+    <div class="col-xs-1">
+    </div>
+  </div>
+  <div class="main container clearfix">
+    <dashboard branding="<%= typeof branding == 'undefined'? data.branding : branding %>" portal="<%= typeof portal == 'undefined'? data.portal : portal %>" recordType="<%= typeof recordType == 'undefined'? data.recordType : recordType %>"></dashboard>
+    <%
+    var currentMinute = sails.config.startupMinute;
+    %>
+    <script type="text/javascript" src="/angular/dashboard/inline.bundle.js?ts=<%= currentMinute %>"></script>
+    <script type="text/javascript" src="/angular/dashboard/polyfills.bundle.js?ts=<%= currentMinute %>"></script>
+    <script type="text/javascript" src="/angular/dashboard/styles.bundle.js?ts=<%= currentMinute %>"></script>
+    <script type="text/javascript" src="/angular/dashboard/vendor.bundle.js?ts=<%= currentMinute %>"></script>
+    <script type="text/javascript" src="/angular/dashboard/main.bundle.js?ts=<%= currentMinute %>"></script>
+
+
+  </div>
+</div>

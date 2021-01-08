@@ -1,0 +1,95 @@
+<% include ../../functions %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="<%= BrandingService.getBrandAndPortalPath(req) %>">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    <%=typeof title == 'undefined' ? TranslationService.t('default-title') : title%>
+  </title>
+
+  <!-- Google Fonts -->
+  <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="<%= BrandingService.getBrandAndPortalPath(req) %>/styles/style.min.css">
+  <link rel="stylesheet" href="<%= BrandingService.getBrandAndPortalPath(req) %>/styles/theme.css">
+
+
+  <!-- Latest jQuery form server -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <!-- Bootstrap JS form CDN -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="user-menu">
+            <ul>
+              <% if (!req.isAuthenticated())  { %>
+                <li><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/user/login"><i class="fa fa-user"></i><%= TranslationService.t('menu-login') %></a></li>
+              <% } else { %>
+                <li><i class="fa fa-user"></i>&nbsp;<%= TranslationService.t('menu-welcome-text') %>
+                  <%= req.user.name %>
+                </li>
+                <li><a href="<%= BrandingService.getBrandAndPortalPath(req) %>/user/logout"><%= TranslationService.t('menu-logout') %></a></li>
+              <% } %>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End header area -->
+
+  <div class="site-branding-area">
+    <div class="container">
+      <div class="row" style="position:relative">
+        <%- superPartial("/layout/logo.ejs", branding, portal, true) %>
+
+        <div class="col-sm-2 search-box">
+          <a href="<%= BrandingService.getBrandAndPortalPath(req) %>/getAdvice"><img src="<%= BrandingService.getBrandAndPortalPath(req) %>/images/help.png" alt="<%= TranslationService.t('help-alt-text') %>"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End site branding area -->
+
+  <%- superPartial("/layout/menu.ejs", branding, portal, true) %>
+  <!-- End mainmenu area -->
+
+<% if (typeof title!== 'undefined') { %>
+<% } %>
+
+  <div class="maincontent-body">
+    <%- body %>
+  </div>
+
+
+
+  <div class="footer footer-bottom-area navbar-bottom">
+      <%- superPartial("/layout/footer.ejs", branding, portal, true) %>
+  </div>
+
+  <!--SCRIPTS-->
+  <script src="/js/dependencies/sails.io.js"></script>
+  <!--SCRIPTS END-->
+</body>
+<% if (res.statusCode <= 400 && sails.config.ng2.use_bundled) { %>
+  <!-- NG2 bundled scripts section, expects a 'ng2_apps' local containing the list of apps to load for this view -->
+  <%- partial ('../../misc/ng2-apps.ejs', {apps: ng2_apps}) %>
+<% } %>
+</html>
