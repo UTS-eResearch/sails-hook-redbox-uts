@@ -3,8 +3,7 @@
 A plugin to install uts customisations.
 
 
-#### Development
-Development Install 
+#### Development on redbox-portal
 
 Add to package.json
 ```json
@@ -17,27 +16,30 @@ or install it via github
 npm install --save https://github.com/UTS-eResearch/sails-hook-redbox-uts.git
 ```
 
-##Plugins
-
-Eventhough the plugins are installed. After installing add all of the plugins available.
+#### Plugins
 
 PDF-GEN
 ```shell
 npm install --save @researchdatabox/sails-hook-redbox-pdfgen
 ```
-GITLAB_HOOK
-```shell
-npm install --save https://github.com/moisbo/sails-hook-redbox-gitlab.git
+
+Workspace Hooks
+
+- GitLab Hook
+- OMERO Hook
+- LabArchives Hook
+- Redcap Hook
+- Catalog Hook
+
+```json
+"sails-hook-redbox-gitlab": "git+https://github.com/moisbo/sails-hook-redbox-gitlab.git",
+"sails-hook-redbox-omero": "git+https://github.com/moisbo/sails-hook-redbox-omero.git",
+"sails-hook-redbox-catalog": "git+https://github.com/uts-eresearch/sails-hook-redbox-catalog.git",
+"sails-hook-redbox-redcap": "git+https://code.research.uts.edu.au/eresearch/sails-hook-redbox-redcap.git",
+"sails-hook-redbox-labarchives": "git+https://code.research.uts.edu.au/eresearch/sails-hook-redbox-labarchives.git",
 ```
-OMERO_HOOK
+
+Then do 
 ```shell
-npm install --save https://github.com/moisbo/sails-hook-redbox-omero.git
-```
-LABARCHIVES_HOOK
-```shell
-npm install --save https://code.research.uts.edu.au/eresearch/sails-hook-redbox-labarchives.git#Stash_3.1.3 #stash_release
-```
-REDCAP
-```shell
-npm install --save https://code.research.uts.edu.au/eresearch/sails-hook-redbox-redcap.git
+npm install 
 ```
