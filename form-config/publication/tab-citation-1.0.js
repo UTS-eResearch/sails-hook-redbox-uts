@@ -58,6 +58,7 @@ module.exports = [
                 help: '@dataPublication-creators-help',
                 freeText: true,
                 splitNames: true,
+                showTitle: false,
                 familyNameHdr: '@dmpt-people-family-hdr',
                 givenNameHdr: '@dmpt-people-given-hdr',
                 nameColHdr: '@dmpt-people-tab-name-hdr',
