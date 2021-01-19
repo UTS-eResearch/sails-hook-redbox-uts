@@ -26,7 +26,7 @@ module.exports.recordtype = {
           options: {
             waitForSelector: 'div#loading.hidden',
             pdfPrefix: 'rdmp-pdf',
-            token: '<%= sails.config.api.token %>'
+            token: sails.config.api.token
           }
         }]
       },
@@ -54,7 +54,7 @@ module.exports.recordtype = {
           options: {
             waitForSelector: 'div#loading.hidden',
             pdfPrefix: 'rdmp-pdf',
-            token: '<%= sails.config.api.token %>'
+            token: sails.config.api.token
           }
         }]
       }
@@ -335,7 +335,7 @@ module.exports.recordtype = {
                   function: 'sails.services.emailservice.sendRecordNotification',
                   options: {
                     forceRun: true,
-                    to: "<%= sails.config.email.datalibrarian.email %>",
+                    to: sails.config.email.datalibrarian.email,
                     subject: "Data publication ready for review",
                     template: "publicationReview"
                   }
@@ -449,7 +449,7 @@ module.exports.recordtype = {
                   function: 'sails.services.emailservice.sendRecordNotification',
                   options: {
                     forceRun: true,
-                    to: "<%= sails.config.email.datalibrarian.email %>",
+                    to: sails.config.email.datalibrarian.email,
                     subject: "Data publication ready for review",
                     template: "publicationReview"
                   }
@@ -472,7 +472,7 @@ module.exports.recordtype = {
             function: 'sails.services.publicationservice.exportDataset',
             options: {
               triggerCondition: "<%= record.workflow.stage=='published' %>",
-              site: '<%= sails.config.datapubs.site.public.url %>'
+              site: sails.config.datapubs.sites.public.url
             }
           },
           // Triggers "Published" Email Notification to FNCI, DM, Collaborators, CC: librarian with RDA link
@@ -489,7 +489,7 @@ module.exports.recordtype = {
                   function: 'sails.services.emailservice.sendRecordNotification',
                   options: {
                     forceRun: true,
-                    to: "<%= sails.config.email.datalibrarian.email %>",
+                    to: sails.config.email.datalibrarian.email,
                     subject: "A publication has been successfully published",
                     template: "publicationPublished"
                   }
