@@ -536,7 +536,7 @@
   "@dataRecord-otherLicenceUrl":"Other licence URL",
   "@dataRecord-rights-statement": "Statement of rights in data",
   "@dataRecord-rights":"",
-  "@dataRecord-rights-help":"Statement of intellectual property rights held over the data, including copyrights, licences, patents or other intellectual property rights relating to use of third party data. Example: \"Copyright, Jane M. Smith, 2019\" or \"Copyright, University of Technology Sydney, 2019\"",
+  "@dataRecord-rights-help":"Statement of intellectual property rights held over the data, including copyrights, licences, patents or other intellectual property rights relating to use of third party data. Example: \"Copyright, Jane M. Smith, 2021\" or \"Copyright, University of Technology Sydney, 2021\"",
   "@dataRecord-rightsUrl":"URL",
   "@dataRecord-rightsUrl-help":"Provide a URL to an intellectual property rights statement if required",
   "@dataRecord-accessConditions":"",
