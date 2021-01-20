@@ -171,12 +171,6 @@ module.exports.auth = {
       path: '/:branding/:portal/home',
       role: 'Guest',
       can_read: true
-    },
-    //If describo is installed:
-    {
-      path: '/:branding/:portal/describo(/*)',
-      role: 'Researcher',
-      can_update: true
     }
   ],
   // Bootstrap END
