@@ -1,5 +1,6 @@
 const fromDefault = `${sails.config.email.app} < ${sails.config.email.admin}`;
 const fromSettings = `noreply@${sails.config.email.appDomain}`;
+// Server is configured to send emails via postfix
 
 module.exports.emailnotification = {
     api: {
@@ -8,7 +9,15 @@ module.exports.emailnotification = {
     settings: {
       enabled: true,
       from: fromSettings,
-      templateDir: "views/emailTemplates/"
+      templateDir: "views/emailTemplates/",
+      serverOptions: {
+        host: 'localhost',
+        port: 25,
+        // secure: false,
+        // tls: {
+        //   rejectUnauthorized: false
+        // }
+      }
     },
     defaults: {
       from: fromDefault,
