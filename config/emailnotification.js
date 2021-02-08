@@ -13,10 +13,10 @@ module.exports.emailnotification = {
       serverOptions: {
         host: 'localhost',
         port: 25,
-        // secure: false,
-        // tls: {
-        //   rejectUnauthorized: false
-        // }
+        secure: false,
+        tls: {
+          rejectUnauthorized: false
+        }
       }
     },
     defaults: {

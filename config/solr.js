@@ -2,7 +2,7 @@ module.exports.solr = {
   createOrUpdateJobName: 'SolrSearchService-CreateOrUpdateIndex',
   deleteJobName: 'SolrSearchService-DeleteFromIndex',
   options: {
-    host: 'solr',
+    host: 'localhost',
     port: '8983',
     core: 'redbox'
   },
