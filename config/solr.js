@@ -1,11 +1,7 @@
 module.exports.solr = {
   createOrUpdateJobName: 'SolrSearchService-CreateOrUpdateIndex',
   deleteJobName: 'SolrSearchService-DeleteFromIndex',
-  options: {
-    host: 'localhost',
-    port: '8983',
-    core: 'redbox'
-  },
+  options: sails.config.solr.options,
   maxWaitTries: 12,
   waitTime: 5000,
   schema: {
