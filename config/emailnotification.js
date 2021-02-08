@@ -1,6 +1,8 @@
 const fromDefault = `${sails.config.email.app} < ${sails.config.email.admin}`;
 const fromSettings = `noreply@${sails.config.email.appDomain}`;
 // Server is configured to send emails via postfix
+// Check your configuration in  /etc/postfix/main.cf
+// Example: mynetworks has 127.0.0.0/8, that means that the host sends in 127.0.0.1 not localhost
 
 module.exports.emailnotification = {
     api: {
