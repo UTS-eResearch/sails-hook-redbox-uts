@@ -287,13 +287,13 @@ module.exports = {
               label: "@dmpt-project-tab",
               active: true,
               fields: [{
-                class: 'Container',
-                compClass: 'TextBlockComponent',
-                definition: {
-                  value: '@dmpt-project-heading',
-                  type: 'h3'
-                }
-              },
+                  class: 'Container',
+                  compClass: 'TextBlockComponent',
+                  definition: {
+                    value: '@dmpt-project-heading',
+                    type: 'h3'
+                  }
+                },
                 {
                   class: 'VocabField',
                   compClass: 'VocabFieldComponent',
@@ -330,7 +330,7 @@ module.exports = {
                         },
                           {
                             action: 'utilityService.getFirstofArray',
-                            field: 'rmId'
+                            field: 'refId'
                           }
                         ]
                       }

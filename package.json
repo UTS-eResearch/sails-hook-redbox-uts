@@ -28,6 +28,10 @@
   "homepage": "https://github.com/UTS-eResearch/sails-hook-redbox-uts#readme",
   "dependencies": {
     "sails-hook-redbox-hook-config-utils": "git+https://github.com/uts-eresearch/sails-hook-redbox-config-utils.git",
-    "sails-hook-redbox-omero": "git+https://github.com/moisbo/sails-hook-redbox-omero.git"
+    "sails-hook-redbox-omero": "git+https://github.com/moisbo/sails-hook-redbox-omero.git",
+    "sails-hook-redbox-gitlab": "git+https://github.com/moisbo/sails-hook-redbox-gitlab.git",
+    "sails-hook-redbox-catalog": "git+https://github.com/uts-eresearch/sails-hook-redbox-catalog.git",
+    "sails-hook-redbox-redcap": "git+https://code.research.uts.edu.au/eresearch/sails-hook-redbox-redcap.git",
+    "sails-hook-redbox-labarchives": "git+https://code.research.uts.edu.au/eresearch/sails-hook-redbox-labarchives.git"
   }
 }
