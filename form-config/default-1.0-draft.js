@@ -3148,7 +3148,7 @@ module.exports = {
                   definition: {
                     value: '@dmpt-workspaces-associated-heading',
                     type: 'h4',
-                    help: 'This table represents the workspaces associated with this data management plan.',
+                    help: 'This table represents the workspaces associated with this data management plan. Click the <i aria-hidden="true" class="fa fa-pencil"></i>&nbsp;edit button to edit or remove them from your plan',
                   }
                 },
                 {
@@ -3156,23 +3156,59 @@ module.exports = {
                   showHeader: true,
                   definition: {
                     name: 'workspaces',
+                    arhiveConfirmMessage: 'will be removed from the data management plan',
+                    confirmArchiveTitle: 'Confirm Archive',
+                    isEditable: true,
                     columns: [{
                       "label": "Name",
-                      "property": "title"
+                      "property": "title",
+                      "isEditable": true,
+                      "cssClasses": "col-md-3"
                     },
                       {
                         "label": "Description",
-                        "property": "description"
+                        "property": "description",
+                        "isEditable": true,
+                        "cssClasses": "col-md-3"
                       },
                       {
                         "label": "Location",
                         "property": "location",
-                        "link": "absolute"
+                        "link": "absolute",
+                        "isEditable": true,
+                        "cssClasses": "col-md-3"
+                      },
+                      {
+                        "label": "Workspace",
+                        "property": "subtype",
+                        "cssClasses": "col-md-1"
                       },
                       {
                         "label": "Type",
-                        "property": "type"
+                        "property": "type",
+                        "cssClasses": "col-md-1"
                       }
+                    ]
+                  }
+                },
+                {
+                  class: 'WorkspaceRegisterField',
+                  compClass: 'WorkspaceRegisterFieldComponent',
+                  definition: {
+                    value: '@dmpt-workspaces-associated-heading',
+                    open: 'Register Research Workspace',
+                    saveFirst: 'Save your plan to register a workspace',
+                    type: 'h4',
+                    workspaceApps: [
+                      {label: "eResearch Store", value: "research-workspace-eresearch-store", description: 'Storage provided by eResearch', image: 'https://stash-uat.research.uts.edu.au/angular/catalog/assets/images/storage.png'},
+                      {label: "OneDrive", value: "research-workspace-onedrive", keywords:'microsoft storage', description: 'Store and share photos, videos, documents', image: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Microsoft_Office_OneDrive_%282018%E2%80%93present%29.svg'},
+                      {label: "Cloudstor", value: "research-workspace-cloudstor", keywords: 'cloudstor storage', description: 'Cloud service for researchers. With CloudStor researchers can easily sync, share and store files using the high-speed AARNet network', image: '/angular/assets/images/cloudstor.png'},
+                      {label: "University Drive", value: "research-workspace-university-drive", keywords:'uts storage', description: 'G:/ or H:// drive provided by UTS', image: 'https://www.lib.uts.edu.au/sites/all/themes/utslib2011/images/logos/UTS_logo_web.svg'},
+                      {label: "Qualtrics", value: "research-workspace-eresearch-qualtrics", keywords:'survey', description: 'Build surveys, distribute surveys and analyze responses ', image: 'https://www.qualtrics.com/m/qualtrics-xm-long.svg'},
+                      {label: "eResearch LimeSurvey", value: "research-workspace-eresearch-limesurvey", keywords:'survey', description: 'Online survey tool that allows one to build surveys, distribute surveys and analyze responses ', image: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Limesurvey_logo.png'},
+                      {label: "HPCC", value: "research-workspace-eresearch-hpcc", keywords:'High Performance Computer Cluster', description: 'High Performance Computing Cluster (HPCC) that can be accessed by UTS researchers.', image: 'https://stash-uat.research.uts.edu.au/angular/catalog/assets/images/uts_hpcc.png'},
+                      {label: "iHPCC", value: "research-workspace-eresearch-ihpc", keywords: 'Interactive High Performance Computer', description: 'The iHPC facility provides an interactive high performance computing resource for all researchers within UTS.', image: 'https://stash-uat.research.uts.edu.au/angular/catalog/assets/images/uts_ihpc.png'},
+                      {label: "Git Repository", value: "research-workspace-eresearch-git-repository", keywords: 'github gitlab', description: 'Repositories in GIT contain a collection of files of various different versions of a Project', image: 'https://git-scm.com/images/logo@2x.png'}
                     ]
                   }
                 },
