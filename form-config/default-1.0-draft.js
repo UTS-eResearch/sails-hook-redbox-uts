@@ -3179,11 +3179,6 @@ module.exports = {
                         "cssClasses": "col-md-3"
                       },
                       {
-                        "label": "Workspace",
-                        "property": "subtype",
-                        "cssClasses": "col-md-1"
-                      },
-                      {
                         "label": "Type",
                         "property": "type",
                         "cssClasses": "col-md-1"
