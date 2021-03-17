@@ -1,5 +1,5 @@
 //const auth = require('./auth');
-const {ConfigService, HookConfig} = require('sails-hook-redbox-hook-config-utils');
+const {ConfigService, HookConfig} = require('sails-redbox-config-utils');
 const config = require('./hook.json');
 
 module.exports = function (sails) {
