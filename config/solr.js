@@ -21,6 +21,13 @@ module.exports.solr = {
         multiValued: false
       },
       {
+        name: "dc_identifier",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
         name: "description",
         type: "text_general",
         indexed: true,
@@ -106,6 +113,27 @@ module.exports.solr = {
       },
       {
         name: "workflow_step",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
+        name: "foaf_fundedBy_vivo_Grant.0.dc_title",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
+        name: "grant_number_name.0",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
+        name: "namespace",
         type: "text_general",
         indexed: true,
         stored: true,
