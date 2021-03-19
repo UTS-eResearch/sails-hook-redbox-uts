@@ -28,6 +28,20 @@ module.exports.solr = {
         multiValued: false
       },
       {
+        name: "contributor_ci.email",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
+        name: "contributor_data_manager.email",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
         name: "description",
         type: "text_general",
         indexed: true,
