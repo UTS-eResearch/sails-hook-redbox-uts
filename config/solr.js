@@ -152,6 +152,20 @@ module.exports.solr = {
         indexed: true,
         stored: true,
         multiValued: false
+      },
+      {
+        name: "startDate",
+        type: "tdate",
+        indexed: true,
+        stored: true,
+        multiValued: false
+      },
+      {
+        name: "endDate",
+        type: "tdate",
+        indexed: true,
+        stored: true,
+        multiValued: false
       }
     ],
     'add-dynamic-field': [
