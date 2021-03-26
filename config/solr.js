@@ -166,6 +166,13 @@ module.exports.solr = {
         indexed: true,
         stored: true,
         multiValued: false
+      },
+      {
+        name: "agls_policy_dc_identifier",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
       }
     ],
     'add-dynamic-field': [
