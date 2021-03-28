@@ -155,14 +155,14 @@ module.exports.solr = {
       },
       {
         name: "startDate",
-        type: "tdate",
+        type: "date",
         indexed: true,
         stored: true,
         multiValued: false
       },
       {
         name: "endDate",
-        type: "tdate",
+        type: "date",
         indexed: true,
         stored: true,
         multiValued: false
