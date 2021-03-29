@@ -173,6 +173,13 @@ module.exports.solr = {
         indexed: true,
         stored: true,
         multiValued: false
+      },
+      {
+        name: "dc_coverage_vivo_DateTimeInterval_vivo_start",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
       }
     ],
     'add-dynamic-field': [
