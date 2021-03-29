@@ -194,6 +194,13 @@ module.exports.solr = {
         indexed: true,
         stored: true,
         multiValued: false
+      },
+      {
+        name: "foaf_fundedBy_vivo_Grant.0.known_ids.0",
+        type: "text_general",
+        indexed: true,
+        stored: true,
+        multiValued: false
       }
     ],
     'add-dynamic-field': [
