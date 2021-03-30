@@ -199,6 +199,18 @@ module.exports.solr = {
         type: "text_general",
         indexed: true,
         stored: true
+      },
+      {
+        name: "creators.*",
+        type: "text_general",
+        indexed: true,
+        stored: true
+      },
+      {
+        name:"dc_subject_*",
+        type: "text_general",
+        indexed: true,
+        stored: true
       }
     ],
     'add-copy-field': [
