@@ -173,47 +173,30 @@ module.exports.solr = {
         indexed: true,
         stored: true,
         multiValued: false
-      },
-      {
-        name: "dc_coverage_vivo_DateTimeInterval_vivo_start",
-        type: "text_general",
-        indexed: true,
-        stored: true,
-        multiValued: false
-      },
-      {
-        name: "dc_coverage_vivo_DateTimeInterval_vivo_end",
-        type: "text_general",
-        indexed: true,
-        stored: true,
-        multiValued: false
-      },
-      {
-        name: "related_publications.0.related_notes",
-        type: "text_general",
-        indexed: true,
-        stored: true,
-        multiValued: false
-      },
-      {
-        name: "foaf_fundedBy_vivo_Grant.0.known_ids.0",
-        type: "text_general",
-        indexed: true,
-        stored: true,
-        multiValued: false
-      },
-      {
-        name: "foaf_fundedBy_vivo_Grant.0.grant_number",
-        type: "text_general",
-        indexed: true,
-        stored: true,
-        multiValued: false
       }
     ],
     'add-dynamic-field': [
       {
         name: "date_*",
         type: "pdate",
+        indexed: true,
+        stored: true
+      },
+      {
+        name: "foaf_*",
+        type: "text_general",
+        indexed: true,
+        stored: true
+      },
+      {
+        name: "related_publications*",
+        type: "text_general",
+        indexed: true,
+        stored: true
+      },
+      {
+        name: "dc_coverage_vivo_*",
+        type: "text_general",
         indexed: true,
         stored: true
       }
