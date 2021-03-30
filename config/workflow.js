@@ -108,20 +108,20 @@ module.exports.workflow = {
     }
 
   },
-  "genericWorkspace": {
-    "draft": {
-      config: {
-        workflow: {
-          stage: 'draft',
-          stageLabel: 'Draft',
-        },
-        authorization: {
-          viewRoles: ['Admin', 'Librarians'],
-          editRoles: ['Admin', 'Librarians']
-        },
-        form: 'genericWorkspace-1.0-draft'
-      },
-      starting: true
-    }
-  }
+  // "genericWorkspace": {
+  //   "draft": {
+  //     config: {
+  //       workflow: {
+  //         stage: 'draft',
+  //         stageLabel: 'Draft',
+  //       },
+  //       authorization: {
+  //         viewRoles: ['Admin', 'Librarians'],
+  //         editRoles: ['Admin', 'Librarians']
+  //       },
+  //       form: 'genericWorkspace-1.0-draft'
+  //     },
+  //     starting: true
+  //   }
+  // }
 };
