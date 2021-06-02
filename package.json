@@ -1,6 +1,6 @@
 {
   "name": "@uts-eresearch/sails-hook-redbox-uts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UTS customisation of RedBox",
   "main": "index.js",
   "sails": {
