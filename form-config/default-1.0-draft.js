@@ -609,6 +609,7 @@ module.exports = {
                   type: 'h3'
                 }
               },
+              //chief investigator
                 {
                   class: 'ContributorField',
                   showHeader: true,
@@ -679,9 +680,11 @@ module.exports = {
                   },
                   variableSubstitutionFields: ['userEmail', 'relationshipFor']
                 },
+                //data manager
                 {
                   class: 'ContributorField',
                   showHeader: true,
+                  showRole: false,
                   definition: {
                     name: 'contributor_data_manager',
                     required: true,
@@ -689,6 +692,7 @@ module.exports = {
                     help: '@dmpt-people-tab-data-manager-help',
                     role: "@dmpt-people-tab-data-manager-role",
                     freeText: false,
+                    forceLookupOnly: true,
                     vocabId: 'Parties AND repository_name:People%20AND%20(*%3A*%20-text_has_appointment:NULL)',
                     sourceType: 'mint',
                     disabledExpression: '<%= !_.isEmpty(oid) %>',
