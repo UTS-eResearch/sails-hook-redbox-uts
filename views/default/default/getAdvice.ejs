@@ -126,7 +126,7 @@
 <div class="row">
   <div class="col-sm-2"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Contacts:</strong></div>
   <div class="col-sm-4">RDM enquiries:</div>
-  <div class="col-sm-4"><img src="<%= BrandingService.getBrandAndPortalPath(req) %>/images/email.png" alt="email icon"><a href="mailto:data-librarian@uts.edu.au"> data-librarian@uts.edu.au </a></div>
+  <div class="col-sm-4"><img src="<%= BrandingService.getBrandAndPortalPath(req) %>/images/email.png" alt="email icon"><a href="mailto:data-librarian@uts.edu.au"> data.librarian@uts.edu.au </a></div>
   <div class="col-sm-2"></div>
 </div> <br />
 <div class="row">
@@ -137,8 +137,8 @@
 </div> <br />
 <div class="row">
   <div class="col-sm-2"></div>
-  <div class="col-sm-4">Hacky Hour (Researcher Help Desk)</div>
-  <div class="col-sm-4"><img src="<%= BrandingService.getBrandAndPortalPath(req) %>/images/helpdesk.png" alt="helpdesk icon"><a href="https://eresearch.uts.edu.au/2015/08/03/hacky_hour_1.htm" target="_blank"> Penny Lane Cafe, B11. Thursdays 3-4pm</a></div>
+  <div class="col-sm-4">Hacky Hour (Research IT Drop-in)</div>
+  <div class="col-sm-4"><img src="<%= BrandingService.getBrandAndPortalPath(req) %>/images/helpdesk.png" alt="helpdesk icon"><a href="https://utsmeet.zoom.us/my/hackyhour" target="_blank"> https://utsmeet.zoom.us/my/hackyhour</a></div>
   <div class="col-sm-2"></div>
 </div> <br /><br />
 
@@ -157,7 +157,6 @@
         In both data centres, storage devices are kept in secure racks where only a limited team of approved UTS administrators can access the rack contents.
       </br /></br /></br /><h5> Data Security  </h5>
         <strong>eResearch Store (aka 'Isilon')</strong> offers granular access control down to User account level. eResearch fileshares are accessible via the UTS secure network, protected by a firewall. From offsite they can be accessed only via VPN. On balance, eResearch Store is the safest location for your data as it will be securely managed for the entire retention period.
-        <br /><br /><strong>CloudStor</strong> is hosted by AARNET (the Australian Academic Research Network), is regularly penetration tested, and is accessible only to individuals with an Australian Access Federation (AAF) login. CloudStor encrypts all data in transit via TLS tunnels between the client and the ha-proxy off-loaders within the CloudStor environment. The CloudStor system encrypts all its storage drives and offers encryption at rest (Source: <a href="https://support.aarnet.edu.au/hc/en-us/categories/200217608-CloudStor" target='_blank'> CloudStor FAQs</a>). If you require a sync and share service or file transfer service, CloudStor is a reasonable option during the active research lifecycle and preferable to carrying sensitive data around on easily lost removable media or mobile devices. However, the master copy of the data should be saved to eResearch Store for long term storage. (NB. this is also the case for <strong>OneDrive</strong> which is is supported by IT Support rather than eResearch)
         <br /><br /><strong>eNotebooks (LabArchives)</strong> eNotebooks are hosted by LabArchives. LabArchives is a secure application on servers hosted at Amazon Web Services located in New South Wales. SSL certificates provide full-time HTTPS security for all User interactions with the application.
 LabArchives has successfully passed network and application security tests from multiple vendors. Each customer's data is stored in its own database, isolated from other customer data.
 Disk storage systems used for customer data utilise block-level "encryption at rest" via LUKS/AES/SHA256 and all backups of customer data reside only in an encrypted form.
